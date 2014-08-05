@@ -5,13 +5,13 @@ import random
 overNum = 0;
 
 # モンテカルロシミュレーションの試行回数	
-trials = 100000
+trials = 10000
 # 試合数
 games = 100
 # 対戦相手の数
 opponentPlayersNumber = 454
 # 当たった数
-times = 3
+times = 5
 
 for i in range(trials):
 	# リストの初期化
@@ -27,4 +27,4 @@ for i in range(trials):
 print overNum
 print trials
 print '確率は%s％'%(100 * float(overNum) / trials)
-print '期待値は%s人'%((100 * float(overNum) / trials) * (opponentPlayersNumber + 1))
+print '期待値は%s人'%((float(overNum) / trials) * (opponentPlayersNumber + 1))
